@@ -126,9 +126,9 @@
 
   <!-- 2-SAHIFA: Video TEPADA + Matn PASTDA -->
   <div id="page2" class="container hidden">
-    <!-- VIDEO TEPADA (Aynan siz yuborgan fayl) -->
+    <!-- VIDEO TEPADA (Ovozi ochiq) -->
     <div class="media-card">
-      <video id="myVideo" loop muted playsinline autoplay>
+      <video id="myVideo" loop playsinline autoplay controls>
         <source src="3d92617870454f6f95a19dbc3efed1a9.mov" type="video/quicktime">
         <source src="3d92617870454f6f95a19dbc3efed1a9.mov" type="video/mp4">
         Sizning brauzeringiz videoni qo'llab-quvvatlamaydi.
@@ -146,6 +146,7 @@
       
       const video = document.getElementById('myVideo');
       if (video) {
+        video.muted = false; // YES bosilganda ovozni avtomatik yoqish
         video.play().catch(e => console.log(e));
       }
 
